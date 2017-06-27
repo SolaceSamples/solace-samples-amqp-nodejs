@@ -1,0 +1,29 @@
+{
+    "name": "solace-samples-amqp-nodejs",
+    "version": "1.0.1",
+    "description": "Solace Messaging Samples for Node.js over AMQP 1.0",
+    "main": "./lib",
+    "dependencies": {
+        
+    },
+    "devDependencies": {
+        
+    },
+    "author": {
+        "name": "Solace Support",
+        "email": "support@solace.com",
+        "url": "http://solace.com"
+    },
+    "homepage": "https://github.com/dfedorov-solace/solace-samples-amqp-nodejs",
+    "license": "Apache2",
+    "keywords": ["amqp",
+    "amqp 1.0",
+    "amqp-1-0",
+    "amqp10",
+    "messaging",
+    "solace"],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dfedorov-solace/solace-samples-amqp-nodejs.git"
+    }
+}
