@@ -1,0 +1,5 @@
+- title: AMQP Node.js Tutorials
+  tutorials:
+  - persistence-with-queues
+  - confirmed-delivery
+  - topic-to-queue-mapping
