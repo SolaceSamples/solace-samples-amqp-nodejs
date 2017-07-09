@@ -90,4 +90,4 @@ process.on('unhandledRejection', (reason, promise) => {
     console.log('QueueSender Unhandled Rejection: promise ', promise, ', reason: ', reason);
 });
 
-new QueueSender().host('192.168.133.16').amqpPort('8555').queue('amqp/tutorial/queue').send('Message with String Data');
+new QueueSender().host('SOLACE_HOSTNAME').amqpPort('AMQP_SERVICE_PORT').queue('amqp/tutorial/queue').send('Message with String Data');
