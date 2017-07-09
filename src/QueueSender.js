@@ -26,7 +26,8 @@
 var QueueSender = function() {
     'use strict';
     var self = {};
-    var AMQP = require("amqp10");
+    var AMQP = require('amqp10');
+    // don't support subjects in the link names
     var amqpClient = new AMQP.Client(AMQP.Policy.merge({
         defaultSubjects : false
     }));
@@ -47,40 +48,36 @@ var QueueSender = function() {
     };
 
     self.log = function(line) {
-        var now = new Date();
-        var time = [ ('0' + now.getHours()).slice(-2), ('0' + now.getMinutes()).slice(-2),
-                ('0' + now.getSeconds()).slice(-2) ];
-        var timestamp = '[' + time.join(':') + '] ';
-        console.log(timestamp + line);
+        var time = new Date().toTimeString().split(' ')[0];
+        console.log(`[${time}]`, line);
     };
 
     self.error = function(error) {
-        self.log("Error: " + JSON.stringify(error));
+        self.log(`Error: ${JSON.stringify(error)}`);
         process.exit();
     };
 
     self.send = function(message) {
-        var url = "amqp://" + self.hostname + ":" + self.port;
-        self.log("Connecting to " + url);
+        var url =  `amqp://${self.hostname}:${self.port}`;
+        self.log(`Connecting to ${url}`);
         amqpClient.connect(url).then(() => {
+            // create a sender to the queue
             return amqpClient.createSender(self.queueName);
         }).then((amqpSender) => {
-            self.log("Sending message '" + message + "'...");
+            self.log(`Sending message '${message}'...`);
             return amqpSender.send(message).then(() => {
-                self.log("Message sent successfully.");
+                self.log('Message sent successfully.');
                 self.exit();
-            }, error => {
+            }, (error) => {
                 self.error(error);
             });
-        }).error(error => {
-            self.error(error);
         });
     };
 
     self.exit = function() {
         setTimeout(() => {
             amqpClient.disconnect().then(() => {
-                self.log("Finished.");
+                self.log('Finished.');
                 process.exit();
             });
         }, 2000); // wait for 2 seconds to exit
@@ -90,7 +87,7 @@ var QueueSender = function() {
 };
 
 process.on('unhandledRejection', (reason, promise) => {
-    console.log("Unhandled Rejection: promise ", promise, ", reason: ", reason);
+    console.log('QueueSender Unhandled Rejection: promise ', promise, ', reason: ', reason);
 });
 
-new QueueSender().host("192.168.133.16").amqpPort("8555").queue("amqp/tutorial/queue").send("Message with String Data");
+new QueueSender().host('192.168.133.16').amqpPort('8555').queue('amqp/tutorial/queue').send('Message with String Data');
