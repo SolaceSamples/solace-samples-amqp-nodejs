@@ -15,12 +15,12 @@ This tutorial is available in [GitHub]({{ site.repository }}){:target="_blank"} 
 
 When sending persistent messages, the *Producer* will not return from the blocking `send()` method until the message is fully acknowledged by the message broker.
 
-This behavior means that applications sending persistent messages using the Solace Message Router are guaranteed that the messages is accepted by the Router by the time the `send()` call returns. No extra publisher acknowledgement handling is required or possible.
+This behavior means that applications sending persistent messages using the Solace Message Router are guaranteed that the messages are accepted by the router by the time the `send()` call returns. No extra publisher acknowledgement handling is required or possible.
 
 This behavior also means that persistent message producers are forced to block on sending each message. This can lead to performance bottlenecks on publish.
 
-## Summarizing
+## Summary
 
-For a Node.js applications there is nothing further they must do to confirm message delivery with the Solace Message Router. This is handled by the underlaying client by making the `send()` call blocking.
+For Node.js applications there is nothing further they must do to confirm message delivery with a Solace Message Router. This is handled by the underlying client by making the `send()` call blocking.
 
 If you have any further questions ask the [Solace community]({{ site.links-community }}){:target="_top"}.
