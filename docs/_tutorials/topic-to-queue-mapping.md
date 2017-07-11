@@ -29,8 +29,8 @@ However Node.js applications wishing to take advantage of this Solace feature ca
 
 Applications can use this API by logging into the Solace message router using a Message-VPN admin account. This concept is introduced in the [Technology – Messaging Platform Features]({{ site.links-tech-other }}){:target="_top"} and further details are available in the [Solace Message Router Product Documentation]({{ site.docs-semp }}){:target="_top"}.
 
-## Summarizing
+## Summary
 
-So in summary Node.js applications wishing to take advantage of this feature have the option of [using one of the Solace management interfaces and directly configure the topic subscriptions on the queue]({{ site.docs-topic-mapping }}){:target="_top"}.
+Node.js applications wishing to take advantage of this feature have the option of [using one of the Solace management interfaces and directly configure the topic subscriptions on the queue]({{ site.docs-topic-mapping }}){:target="_top"}.
 
 If you have any issues or questions check the [Solace community]({{ site.links-community }}){:target="_top"} for answers and discussions.
