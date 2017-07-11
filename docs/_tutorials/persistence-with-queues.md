@@ -49,7 +49,7 @@ In order to send or receive messages to a Solace message router, you need to kno
 <tr>
 <td>Host</td>
 <td>String of the form <code>DNS name</code> or <code>IP:Port</code></td>
-<td>This is the address client’s use when connecting to the Solace Message Router to send and receive messages. For a Solace VMR this there is only a single interface so the IP is the same as the management IP address. For Solace message router appliances this is the host address of the message-backbone. The port number must match the port number for the plain text AMQP service on the router.</td>
+<td>This is the address clients use when connecting to the Solace Message Router to send and receive messages. For a Solace VMR there is only a single interface so the IP is the same as the management IP address. For Solace message router appliances this is the host address of the message-backbone. The port number must match the port number for the plain text AMQP service on the router.</td>
 </tr>
 <tr>
 <td>Message VPN</td>
@@ -82,9 +82,9 @@ $ npm install amqp10 -save
 
 The *amqp10* client uses *Promise* from the [*Bluebird* library](http://bluebirdjs.com) that is a superset of the ES6 *Promise* specification, but our tutorial examples will follow only the ES6 *Promise* specification.
 
-In order to send or receive messages, an application that uses *amqp10* client must start connection to the Solace Message Router AMQP service URL. The URL consists of the Solace Message Router host name with the AMQP service port number.
+In order to send or receive messages, an application that uses the *amqp10* client must start a connection to the Solace Message Router AMQP service URL. The URL consists of the Solace Message Router host name with the AMQP service port number.
 
-Assigning `defaultSubjects` to `false` allows to use a slash-separated hierarchy in the queue name.
+Assigning `defaultSubjects` to `false` allows the use of a slash-separated hierarchy in the queue name.
 
 *QueueSender.js/QueueRecevier.js*
 ~~~javascript
@@ -126,7 +126,7 @@ To receive a persistent message from a queue a *Receiver* needs to be created.
 
 The name of the queue for sending messages is given to *Receiver* when it is being created and it is the same as the one we send messages to.
 
-The created *Receiver* emits events, and listener functions for at least `message` and `errorReceived` events need to be declared. The event `message` will be emitted for every message recevied by the *Recevier*.
+The created *Receiver* emits events, and listener functions for at least `message` and `errorReceived` events need to be declared. A `message` event is emitted for every message recevied by the *Recevier*.
 
 *QueueReceiver.java*
 ~~~javascript
@@ -142,7 +142,7 @@ amqpClient.connect('amqp://192.168.123.45:8555').then(() => {
 ~~~
 
 
-## Summarizing
+## Summary
 
 Combining the example source code shown above results in the following source code files:
 
@@ -160,9 +160,9 @@ cd {{ site.baseurl | remove: '/'}}
 
 ### Running
 
-Modify examples code to reflect your Solace Message Router host and port number for the AMQP service.
+Modify the example code to reflect your Solace Message Router host and port number for the AMQP service.
 
-Then the examples can be executed as:
+The examples can be executed as:
 
 ~~~sh
 node src/QueueReceiver.js
@@ -171,7 +171,7 @@ node src.QueueSender.js
 
 ### Sample Output
 
-First start the `QueueReceiver` so that it is up and waiting for messages.
+Start the `QueueReceiver` so that it is up and waiting for messages.
 
 ~~~sh
 $ node src/QueueReceiver.js
@@ -179,7 +179,7 @@ $ node src/QueueReceiver.js
 [17:13:14] Waiting for messages...
 ~~~
 
-Then you can start the `QueueSender` to send the message.
+Then run the `QueueSender` to send the message.
 
 ~~~sh
 $ node src/QueueSender.js
@@ -198,6 +198,6 @@ Notice how the message is received by the `QueueReceiver`.
 [17:13:55] Finished.
 ~~~
 
-Now you know how to use **amqp10** AMQP 1.0 compliant Node.js client with the Solace Message Router to send and receive persistent messages from a queue.
+Now you know how to use the **amqp10** AMQP 1.0 compliant Node.js client with the Solace Message Router to send and receive persistent messages from a queue.
 
 If you have any issues sending and receiving message or reply, check the [Solace community]({{ site.links-community }}){:target="_top"} for answers to common issues seen.
