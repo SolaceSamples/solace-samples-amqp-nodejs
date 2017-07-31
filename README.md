@@ -1,4 +1,4 @@
-# Getting Started Tutorials
+# Getting Started Examples
 
 ## Using Node.js over AMQP 1.0 with Solace Message Routers
 
@@ -19,13 +19,40 @@ The "Getting Started" tutorials will get you up to speed and sending messages wi
 
 This repository contains code and matching tutorial walkthroughs for different basic scenarios. It is best to view the associated [tutorials home page](https://solacesamples.github.io/solace-samples-amqp-nodejs/).
 
+## Checking out and Building
+
+To check out the project and build it, do the following:
+
+  1. clone this GitHub repository
+  1. `cd solace-samples-nodejs`
+
+### AMQP 10 JavaScript Library
+
+The `AMQP 10` JavaScript library can be [downloaded here](https://www.npmjs.com/package/amqp10).  The instructions in this tutorial assume you have installed this library with `npm`.
+
+```sh
+$ npm install amqp10 -save
+```
+
+## Running the Samples
+
+The samples are found in the `src` directory.
+
+You run the sample using `node`. For example:
+
+```sh
+$ node QueueConsumer.js amqp://<SOLACE_HOST>:<AMQP_PORT>
+```
+
+See the [tutorials](https://solacesamples.github.io/solace-samples-nodejs/) for more details.
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
-See the list of [contributors](https://github.com/dfedorov-solace/solace-samples-amqp-nodejs/contributors) who participated in this project.
+See the list of [contributors](https://github.com/SolaceSamples/solace-samples-amqp-nodejs/contributors) who participated in this project.
 
 ## License
 
