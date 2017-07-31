@@ -37,11 +37,6 @@ var QueueProducer = function() {
         return self;
     };
 
-    self.amqpPort = function(port) {
-        self.port = port;
-        return self;
-    };
-
     self.queue = function(queueName) {
         self.queueName = queueName;
         return self;
@@ -58,9 +53,8 @@ var QueueProducer = function() {
     };
 
     self.send = function(message) {
-        var url =  `amqp://${self.hostname}:${self.port}`;
-        self.log(`Connecting to ${url}`);
-        amqpClient.connect(url).then(() => {
+        self.log(`Connecting to ${self.hostname}`);
+        amqpClient.connect(self.hostname).then(() => {
             // create a sender to the queue
             return amqpClient.createSender(self.queueName);
         }).then((amqpSender) => {
@@ -91,11 +85,13 @@ process.on('unhandledRejection', (reason, promise) => {
 });
 
 if (process.argv.length <= 2) {
-    console.log("Usage: " + __filename + " <msg_backbone_ip:amqp_port>");
+    console.log("Usage: " + __filename + " amqp://<msg_backbone_ip:amqp_port>");
     process.exit(-1);
 }
  
-// create and start the application
-var queueProducer = new QueueProducer().host(process.argv.slice(2)[0]).queue('Q/tutorial')
+// start the application
+var solaceHostname = process.argv.slice(2)[0];
+var queueProducer = new QueueProducer().host(solaceHostname).queue('Q/tutorial');
+
 // send the message
 queueProducer.send('Hello world Queues!');

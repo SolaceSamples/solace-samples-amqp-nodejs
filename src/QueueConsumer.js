@@ -53,9 +53,8 @@ var QueueConsumer = function() {
     };
 
     self.receive = function() {
-        var url =  `amqp://${self.hostname}`;
-        self.log(`Connecting to ${url}`);
-        amqpClient.connect(url).then(() => {
+        self.log(`Connecting to ${self.hostname}`);
+        amqpClient.connect(self.hostname).then(() => {
             // create a received from the queue
             return amqpClient.createReceiver(self.queueName);
         }).then((amqpReceiver) => {
@@ -88,11 +87,13 @@ process.on('unhandledRejection', (reason, promise) => {
 
 
 if (process.argv.length <= 2) {
-    console.log("Usage: " + __filename + " <msg_backbone_ip:amqp_port>");
+    console.log("Usage: " + __filename + " amqp://<msg_backbone_ip:amqp_port>");
     process.exit(-1);
 }
  
-// create and start the application
-var queueConsumer = new QueueConsumer().host(process.argv.slice(2)[0]).queue('Q/tutorial')
+// start the application
+var solaceHostname = process.argv.slice(2)[0]
+var queueConsumer = new QueueConsumer().host(solaceHostname).queue('Q/tutorial')
+
 // the next statement blocks until a message is received
 queueConsumer.receive();
