@@ -92,8 +92,8 @@ if (process.argv.length <= 2) {
 }
  
 // start the application
-var solaceHostname = process.argv.slice(2)[0]
-var queueConsumer = new QueueConsumer().host(solaceHostname).queue('Q/tutorial')
+var solaceHostname = process.argv.slice(2)[0];
+var queueConsumer = new QueueConsumer().host(solaceHostname).queue('Q/tutorial');
 
 // the next statement blocks until a message is received
 queueConsumer.receive();
