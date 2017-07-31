@@ -1,7 +1,7 @@
 # Site settings
 title: Solace Messaging using Node.js over AMQP
 baseurl: "/solace-samples-amqp-nodejs"
-repository: https://github.com/dfedorov-solace/solace-samples-amqp-nodejs
+repository: https://github.com/SolaceSamples/solace-samples-amqp-nodejs
 
 # Also see _includes/intro.html to customize the description which gets included in index.html.
 
