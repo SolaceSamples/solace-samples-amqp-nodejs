@@ -8,7 +8,7 @@
     "email": "support@solace.com",
     "url": "http://solace.com"
   },
-  "homepage": "https://github.com/dfedorov-solace/solace-samples-amqp-nodejs",
+  "homepage": "https://github.com/SolaceSamples/solace-samples-amqp-nodejs",
   "license": "Apache-2.0",
   "keywords": [
     "amqp",
@@ -20,7 +20,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dfedorov-solace/solace-samples-amqp-nodejs.git"
+    "url": "https://github.com/SolaceSamples/solace-samples-amqp-nodejs.git"
   },
   "dependencies": {
     "amqp10": "^3.5.3",
