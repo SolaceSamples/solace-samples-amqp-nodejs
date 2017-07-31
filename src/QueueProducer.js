@@ -18,12 +18,12 @@
  */
 
 /**
- * Solace AMQP Node.js Examples: QueueSender
+ * Solace AMQP Node.js Examples: QueueProducer
  */
 
 /* jshint node: true, esversion: 6 */
 
-var QueueSender = function() {
+var QueueProducer = function() {
     'use strict';
     var self = {};
     var AMQP = require('amqp10');
@@ -87,7 +87,15 @@ var QueueSender = function() {
 };
 
 process.on('unhandledRejection', (reason, promise) => {
-    console.log('QueueSender Unhandled Rejection: promise ', promise, ', reason: ', reason);
+    console.log('QueueProducer Unhandled Rejection: promise ', promise, ', reason: ', reason);
 });
 
-new QueueSender().host('SOLACE_HOSTNAME').amqpPort('AMQP_SERVICE_PORT').queue('amqp/tutorial/queue').send('Message with String Data');
+if (process.argv.length <= 2) {
+    console.log("Usage: " + __filename + " <msg_backbone_ip:amqp_port>");
+    process.exit(-1);
+}
+ 
+// create and start the application
+var queueProducer = new QueueProducer().host(process.argv.slice(2)[0]).queue('Q/tutorial')
+// send the message
+queueProducer.send('Hello world Queues!');

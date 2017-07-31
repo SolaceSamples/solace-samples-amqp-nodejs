@@ -18,12 +18,12 @@
  */
 
 /**
- * Solace AMQP Node.js Examples: QueueReceiver
+ * Solace AMQP Node.js Examples: QueueConsumer
  */
 
 /* jshint node: true, esversion: 6 */
 
-var QueueReceiver = function() {
+var QueueConsumer = function() {
     'use strict';
     var self = {};
     var AMQP = require('amqp10');
@@ -34,11 +34,6 @@ var QueueReceiver = function() {
 
     self.host = function(hostname) {
         self.hostname = hostname;
-        return self;
-    };
-
-    self.amqpPort = function(port) {
-        self.port = port;
         return self;
     };
 
@@ -58,7 +53,7 @@ var QueueReceiver = function() {
     };
 
     self.receive = function() {
-        var url =  `amqp://${self.hostname}:${self.port}`;
+        var url =  `amqp://${self.hostname}`;
         self.log(`Connecting to ${url}`);
         amqpClient.connect(url).then(() => {
             // create a received from the queue
@@ -88,7 +83,16 @@ var QueueReceiver = function() {
 };
 
 process.on('unhandledRejection', (reason, promise) => {
-    console.log('QueueReceiver Unhandled Rejection: promise ', promise, ', reason: ', reason);
+    console.log('QueueConsumer Unhandled Rejection: promise ', promise, ', reason: ', reason);
 });
 
-new QueueReceiver().host('SOLACE_HOSTNAME').amqpPort('AMQP_SERVICE_PORT').queue('amqp/tutorial/queue').receive();
+
+if (process.argv.length <= 2) {
+    console.log("Usage: " + __filename + " <msg_backbone_ip:amqp_port>");
+    process.exit(-1);
+}
+ 
+// create and start the application
+var queueConsumer = new QueueConsumer().host(process.argv.slice(2)[0]).queue('Q/tutorial')
+// the next statement blocks until a message is received
+queueConsumer.receive();
