@@ -44,7 +44,7 @@ You run the sample using `node`. For example:
 $ node QueueConsumer.js amqp://<SOLACE_HOST>:<AMQP_PORT>
 ```
 
-See the [tutorials](https://solacesamples.github.io/solace-samples-nodejs/) for more details.
+See the [tutorials](https://solacesamples.github.io/solace-samples-amqp-nodejs/) for more details.
 
 ## Contributing
 
