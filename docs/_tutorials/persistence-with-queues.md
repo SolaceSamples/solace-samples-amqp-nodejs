@@ -2,12 +2,10 @@
 layout: tutorials
 title: Persistence with Queues
 summary: Demonstrates persistent messages for guaranteed delivery.
-icon: persistence-with-queues-icon.png
+icon: I_dev_Persistent.svg
 ---
 
 This tutorial will show you how to send and receive persistent messages with Node.js using the [**amqp10** AMQP 1.0 compliant client](https://github.com/noodlefrenzy/node-amqp10)  and Solace Message Router.
-
-![Sample Image Text]({{ site.baseurl }}/images/persistence-with-queues-icon.png)
 
 This tutorial is available in [GitHub]({{ site.repository }}){:target="_blank"} along with the other [Solace Getting Started AMQP Tutorials]({{ site.links-get-started-amqp }}){:target="_top"}.
 

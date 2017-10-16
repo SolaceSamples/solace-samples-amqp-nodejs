@@ -1,5 +1,6 @@
 # Site settings
 title: Solace Messaging using Node.js over AMQP
+summary: These tutorials get you up to speed sending and receiving messages with Solace technology.
 baseurl: "/solace-samples-amqp-nodejs"
 repository: https://github.com/SolaceSamples/solace-samples-amqp-nodejs
 
