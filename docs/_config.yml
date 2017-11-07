@@ -13,6 +13,7 @@ links-get-started-jms-topic-to-queue-mapping: http://dev.solace.com/get-started/
 links-community: http://dev.solace.com/community/
 links-downloads: http://dev.solace.com/downloads/
 links-tech-other: http://dev.solace.com/tech/#other
+links-solaceCloud-setup: http://cloud.solace.com/create-messaging-service/
 docs-vmr-setup: http://docs.solace.com/Solace-VMR-Set-Up/Setting-Up-VMRs.htm
 docs-core-concepts: http://docs.solace.com/Features/Core-Concepts.htm
 docs-management-tools: http://docs.solace.com/Management-Tools.htm
