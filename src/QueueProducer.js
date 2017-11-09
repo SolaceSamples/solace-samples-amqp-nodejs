@@ -85,7 +85,7 @@ process.on('unhandledRejection', (reason, promise) => {
 });
 
 if (process.argv.length <= 2) {
-    console.log("Usage: " + __filename + " amqp://<msg_backbone_ip:amqp_port>");
+    console.log("Usage: " + __filename + " amqp://<username>:<password>@<host:amqp_port>");
     process.exit(-1);
 }
  
