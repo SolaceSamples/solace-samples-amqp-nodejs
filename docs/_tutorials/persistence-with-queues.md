@@ -6,7 +6,7 @@ icon: I_dev_Persistent.svg
 links:
     - label: QueueProducer.js
       link: /blob/master/src/QueueProducer.js
-    - label: QueueConsumber.js
+    - label: QueueConsumer.js
       link: /blob/master/src/QueueConsumer.js
 ---
 
