@@ -59,6 +59,39 @@ other-environments-dev:
   - value: http://dev.solace.com/get-started/pcf-tutorials/
     name: Pivotal Cloud Foundry
 
+solace-apis-cloud:
+  - value: http://cloud.solace.com/samples/solace-samples-c/
+    name: C
+  - value: http://cloud.solace.com/samples/solace-samples-dotnet/
+    name: C#/.NET
+  - value: http://cloud.solace.com/samples/solace-samples-java/
+    name: Java
+  - value: http://cloud.solace.com/samples/solace-samples-javarto/
+    name: Java RTO
+  - value: http://cloud.solace.com/samples/solace-samples-javascript/
+    name: JavaScript
+  - value: http://cloud.solace.com/samples/solace-samples-nodejs/
+    name: Node.js
+open-apis-cloud:
+  - value: http://cloud.solace.com/samples/solace-samples-amqp-qpid-jms1/
+    name: AMQP - JMS 1.1
+  - value: http://cloud.solace.com/samples/solace-samples-amqp-qpid-jms2/
+    name: AMQP - JMS 2.0
+  - value: http://cloud.solace.com/samples/solace-samples-amqp-nodejs/
+    name: AMQP - Node.js
+  - value: http://cloud.solace.com/samples/solace-samples-mqtt/
+    name: MQTT - Eclipse Paho Java
+  - value: http://cloud.solace.com/samples/solace-samples-amqp-qpid-jms1/
+    name: JMS 1.1 - Apache Qpid
+  - value: http://cloud.solace.com/samples/solace-samples-amqp-qpid-jms2/
+    name: JMS 2.0 - Apache Qpid
+  - value: http://cloud.solace.com/samples/solace-samples-jms/
+    name: JMS 1.1 - Solace
+  - value: http://cloud.solace.com/samples/solace-samples-openmama/
+    name: OpenMAMA
+  - value: http://cloud.solace.com/samples/solace-samples-rest-messaging/
+    name: REST Messaging
+
 
 #----------------------------------------------------
 # Generally don't modify items below this point
