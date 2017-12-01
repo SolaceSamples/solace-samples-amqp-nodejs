@@ -12,8 +12,6 @@ links:
 
 This tutorial will show you how to send and receive persistent messages with Node.js using the [**amqp10** AMQP 1.0 compliant client](https://github.com/noodlefrenzy/node-amqp10)  and Solace messaging
 
-This tutorial is available in [GitHub]({{ site.repository }}){:target="_blank"} along with the other [Solace Getting Started AMQP Tutorials]({{ site.links-get-started-amqp }}){:target="_top"}.
-
 At the end, this tutorial walks through downloading and running the sample from source.
 
 ## Assumptions
