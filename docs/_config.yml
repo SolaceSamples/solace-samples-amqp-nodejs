@@ -21,7 +21,7 @@ docs-management-cli: http://docs.solace.com/Configuring-and-Managing-Routers/Usi
 docs-topic-mapping: http://docs.solace.com/Features/Core-Concepts.htm#topic-queue-mapping
 docs-semp: http://docs.solace.com/SEMP/Using-SEMP-to-Manage-and-Monitor-Routers.htm
 docs-semp-get-started: http://docs.solace.com/SEMP/SEMP-Get-Started.htm
-docs-configure-queues: http://docs.solace.com/Configuring-and-Managing-Route
+docs-configure-queues: http://docs.solace.com/Configuring-and-Managing-Routers/Configuring-Queues.htm
 docs-vmr-setup: http://docs.solace.com/Solace-VMR-Set-Up/Setting-Up-VMRs.htm
 solace-apis-dev:
   - value: http://dev.solace.com/get-started/c-tutorials/
