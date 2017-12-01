@@ -1,8 +1,8 @@
 # Site settings
-title: Solace Samples Template
+title: Solace Messaging using Node.js over AMQP
 summary: These tutorials get you up to speed sending and receiving messages with Solace technology.
-baseurl: "/solace-samples-template" # the subpath of your site, e.g. /solace-samples-java
-repository: https://github.com/SolaceSamples/solace-samples-template
+baseurl: "/solace-samples-amqp-nodejs"
+repository: https://github.com/SolaceSamples/solace-samples-amqp-nodejs
 
 # Also see _includes/intro.html to customize the description which gets included in index.html.
 
@@ -21,7 +21,7 @@ docs-management-cli: http://docs.solace.com/Configuring-and-Managing-Routers/Usi
 docs-topic-mapping: http://docs.solace.com/Features/Core-Concepts.htm#topic-queue-mapping
 docs-semp: http://docs.solace.com/SEMP/Using-SEMP-to-Manage-and-Monitor-Routers.htm
 docs-semp-get-started: http://docs.solace.com/SEMP/SEMP-Get-Started.htm
-docs-confugure-queues: http://docs.solace.com/Configuring-and-Managing-Route
+docs-configure-queues: http://docs.solace.com/Configuring-and-Managing-Route
 docs-vmr-setup: http://docs.solace.com/Solace-VMR-Set-Up/Setting-Up-VMRs.htm
 solace-apis-dev:
   - value: http://dev.solace.com/get-started/c-tutorials/
@@ -59,38 +59,6 @@ other-environments-dev:
   - value: http://dev.solace.com/get-started/pcf-tutorials/
     name: Pivotal Cloud Foundry
 
-solace-apis-cloud:
-  - value: http://cloud.solace.com/samples/solace-samples-c/
-    name: C
-  - value: http://cloud.solace.com/samples/solace-samples-dotnet/
-    name: C#/.NET
-  - value: http://cloud.solace.com/samples/solace-samples-java/
-    name: Java
-  - value: http://cloud.solace.com/samples/solace-samples-javarto/
-    name: Java RTO
-  - value: http://cloud.solace.com/samples/solace-samples-javascript/
-    name: JavaScript
-  - value: http://cloud.solace.com/samples/solace-samples-nodejs/
-    name: Node.js
-open-apis-cloud:
-  - value: http://cloud.solace.com/samples/solace-samples-amqp-qpid-jms1/
-    name: AMQP - JMS 1.1
-  - value: http://cloud.solace.com/samples/solace-samples-amqp-qpid-jms2/
-    name: AMQP - JMS 2.0
-  - value: http://cloud.solace.com/samples/solace-samples-amqp-nodejs/
-    name: AMQP - Node.js
-  - value: http://cloud.solace.com/samples/solace-samples-mqtt/
-    name: MQTT - Eclipse Paho Java
-  - value: http://cloud.solace.com/samples/solace-samples-amqp-qpid-jms1/
-    name: JMS 1.1 - Apache Qpid
-  - value: http://cloud.solace.com/samples/solace-samples-amqp-qpid-jms2/
-    name: JMS 2.0 - Apache Qpid
-  - value: http://cloud.solace.com/samples/solace-samples-jms/
-    name: JMS 1.1 - Solace
-  - value: http://cloud.solace.com/samples/solace-samples-openmama/
-    name: OpenMAMA
-  - value: http://cloud.solace.com/samples/solace-samples-rest-messaging/
-    name: REST Messaging
 
 #----------------------------------------------------
 # Generally don't modify items below this point
