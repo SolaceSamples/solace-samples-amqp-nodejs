@@ -14,7 +14,6 @@ links-community: http://dev.solace.com/community/
 links-downloads: http://dev.solace.com/downloads/
 links-tech-other: http://dev.solace.com/tech/#other
 links-solaceCloud-setup: http://cloud.solace.com/create-messaging-service/
-docs-vmr-setup: http://docs.solace.com/Solace-VMR-Set-Up/Setting-Up-VMRs.htm
 docs-core-concepts: http://docs.solace.com/Features/Core-Concepts.htm
 docs-management-tools: http://docs.solace.com/Management-Tools.htm
 docs-management-soladmin: http://docs.solace.com/SolAdmin/SolAdmin-Home.htm?Highlight=SolAdmin
@@ -22,8 +21,8 @@ docs-management-cli: http://docs.solace.com/Configuring-and-Managing-Routers/Usi
 docs-topic-mapping: http://docs.solace.com/Features/Core-Concepts.htm#topic-queue-mapping
 docs-semp: http://docs.solace.com/SEMP/Using-SEMP-to-Manage-and-Monitor-Routers.htm
 docs-semp-get-started: http://docs.solace.com/SEMP/SEMP-Get-Started.htm
-docs-confugure-queues: http://docs.solace.com/Configuring-and-Managing-Routers/Configuring-Queues.htm
-
+docs-configure-queues: http://docs.solace.com/Configuring-and-Managing-Routers/Configuring-Queues.htm
+docs-vmr-setup: http://docs.solace.com/Solace-VMR-Set-Up/Setting-Up-VMRs.htm
 solace-apis-dev:
   - value: http://dev.solace.com/get-started/c-tutorials/
     name: C
@@ -31,6 +30,8 @@ solace-apis-dev:
     name: C#/.NET
   - value: http://dev.solace.com/get-started/java-tutorials/
     name: Java
+  - value: http://dev.solace.com/get-started/java-rto-tutorials/
+    name: Java RTO
   - value: http://dev.solace.com/get-started/javascript-tutorials/
     name: JavaScript
   - value: http://dev.solace.com/get-started/node-js-tutorials/
@@ -65,6 +66,8 @@ solace-apis-cloud:
     name: C#/.NET
   - value: http://cloud.solace.com/samples/solace-samples-java/
     name: Java
+  - value: http://cloud.solace.com/samples/solace-samples-javarto/
+    name: Java RTO
   - value: http://cloud.solace.com/samples/solace-samples-javascript/
     name: JavaScript
   - value: http://cloud.solace.com/samples/solace-samples-nodejs/
@@ -88,6 +91,7 @@ open-apis-cloud:
     name: OpenMAMA
   - value: http://cloud.solace.com/samples/solace-samples-rest-messaging/
     name: REST Messaging
+
 
 #----------------------------------------------------
 # Generally don't modify items below this point
