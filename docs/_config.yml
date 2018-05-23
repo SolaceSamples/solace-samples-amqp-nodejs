@@ -7,6 +7,8 @@ repository: https://github.com/SolaceSamples/solace-samples-amqp-nodejs
 # Also see _includes/intro.html to customize the description which gets included in index.html.
 
 # Links
+hostname: cloud.solace.com
+dev-hostname: dev.solace.com
 links-get-started-amqp: //dev.solace.com/get-started/amqp-tutorials/
 links-get-started-java-topic-to-queue-mapping: //dev.solace.com/get-started/java-tutorials/topic-queue-mapping_java/
 links-get-started-jms-topic-to-queue-mapping: //dev.solace.com/get-started/jms-tutorials/topic-queue-mapping_jms/
