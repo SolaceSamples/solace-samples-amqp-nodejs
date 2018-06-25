@@ -18,7 +18,7 @@ The "Getting Started" tutorials will get you up to speed and sending messages wi
 
 ## Contents
 
-This repository contains code and matching tutorial walkthroughs for different basic scenarios. It is best to view the associated [tutorials home page](https://solacesamples.github.io/solace-samples-amqp-nodejs/).
+This repository contains code and matching tutorial walkthroughs for different basic scenarios. It is best to view the associated [tutorials home page](https://dev.solace.com/samples/solace-samples-amqp-nodejs/).
 
 ## Checking out and Building
 
@@ -45,7 +45,7 @@ You run the sample using `node`. For example:
 $ node QueueConsumer.js amqp://<SOLACE_HOST>:<AMQP_PORT>
 ```
 
-See the [tutorials](https://solacesamples.github.io/solace-samples-amqp-nodejs/) for more details.
+See the [tutorials](https://dev.solace.com/samples/solace-samples-amqp-nodejs/) for more details.
 
 ## Contributing
 
