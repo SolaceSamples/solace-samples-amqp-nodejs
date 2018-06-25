@@ -34,8 +34,8 @@ The goal of this tutorial is to demonstrate how to use the [**amqp10** AMQP 1.0 
 2.  How to bind to this queue and receive a persistent message
 
 
-{% include solaceMessaging.md %}
-{% include amqpApi.md %}
+{% include_relative assets/solaceMessaging.md %}
+{% include_relative assets/amqpApi.md %}
 
 ## Connecting to the Solace Messaging
 
@@ -69,7 +69,7 @@ At this point the application is connected to Solace messaging and ready to send
 
 In order to send a message to a queue a *Sender* needs to be created.
 
-![sending-message-to-queue]({{ site.baseurl }}/images/persistence-with-queues-details-2.png)
+![sending-message-to-queue]({{ site.baseurl }}/assets/images/persistence-with-queues-details-2.png)
 
 The name of the queue for sending messages is given to *Sender* when it is being created.
 
@@ -85,7 +85,7 @@ amqpClient.connect(self.hostname).then(()
 
 To receive a persistent message from a queue a *Receiver* needs to be created.
 
-![]({{ site.baseurl }}/images/persistence-with-queues-details-1.png)
+![]({{ site.baseurl }}/assets/images/persistence-with-queues-details-1.png)
 
 The name of the queue for sending messages is given to *Receiver* when it is being created and it is the same as the one we send messages to.
 
