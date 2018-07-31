@@ -3,3 +3,5 @@
   - persistence-with-queues
   - confirmed-delivery
   - topic-to-queue-mapping
+
+  features:
