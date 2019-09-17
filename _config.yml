@@ -21,4 +21,4 @@ docs-management-cli: //docs.solace.com/Solace-CLI/Using-Solace-CLI.htm
 docs-topic-mapping: //docs.solace.com/PubSub-Basics/Core-Concepts.htm
 docs-semp: //docs.solace.com/SEMP/Using-SEMP-to-Manage-and-Monitor-Routers.htm
 docs-semp-get-started: //docs.solace.com/SEMP/SEMP-Get-Started.htm
-docs-configure-queues: //docs.solace.com/Configuring-and-Managing-Routers/Configuring-Queues.htm
+docs-configure-queues: //https://docs.solace.com/Configuring-and-Managing/Configuring-Queues.htm
