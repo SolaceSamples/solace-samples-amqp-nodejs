@@ -1,7 +1,6 @@
 # Getting Started Examples
 
-> **Note**
->
+> [!CAUTION]
 > This is an archived repository and is not actively maintained. AMQP 1.0 is an open standard protocol, developers can use any AMQP 1.0 library of their choice and follow the respected open source examples as a reference. [Solace supports the AMQP 1.0 protocol](https://docs.solace.com/API/AMQP/AMQP-API-Rec.htm) but does not produce or officially support this API. Issues should be pursued through the project's maintainer.
 
 
