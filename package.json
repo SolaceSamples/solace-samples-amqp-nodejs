@@ -23,8 +23,9 @@
     "url": "https://github.com/SolaceSamples/solace-samples-amqp-nodejs.git"
   },
   "dependencies": {
-    "amqp10": "^3.5.3",
-    "bluebird": "^3.5.0"
+    "amqplib": "^0.10.8",
+    "bluebird": "^3.5.0",
+    "rhea": "^3.0.4"
   },
   "scripts": {
     "lint": "jshint src",
